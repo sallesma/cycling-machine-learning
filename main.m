@@ -27,3 +27,14 @@ fprintf('Number of examples in training set: %i\n', size(Xtrain,1));
 fprintf('Number of examples in cross validation set: %i\n', size(Xcv,1));
 fprintf('Number of examples in test set: %i\n', size(Xtest,1));
 fprintf('Number of features: %i\n', size(X,2));
+
+
+%% Train linear regression with lambda = 0
+lambda = 0;
+
+fprintf('Training with linear regression and lambda = %f...\n', lambda);
+
+[theta] = trainLinearRegression(X, Y, lambda);
+
+fprintf('Training finished.\n');;
+theta
