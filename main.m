@@ -34,7 +34,12 @@ lambda = 0;
 
 fprintf('Training with linear regression and lambda = %f...\n', lambda);
 
-[theta] = trainLinearRegression(X, Y, lambda);
+[Theta] = trainLinearRegression(X, Y, lambda);
 
 fprintf('Training finished.\n');;
-theta
+Theta
+
+
+%% Test error
+TestError = testError(Xtest, Ytest, Theta);
+fprintf('Error on test set: %f', TestError);
